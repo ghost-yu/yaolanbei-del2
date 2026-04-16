@@ -1,0 +1,135 @@
+.ud-contact {
+  position: relative;
+  background: linear-gradient(180deg, #f6f9ff 0%, #eef3ff 100%);
+  padding: 96px 0;
+}
+
+.ud-contact .ud-contact-content-wrapper {
+  padding-right: 24px;
+}
+
+.ud-contact .ud-contact-title span {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3763eb;
+  letter-spacing: 1.6px;
+}
+
+.ud-contact .ud-contact-title h2 {
+  margin-bottom: 26px;
+  color: #1d2144;
+  line-height: 1.35;
+  font-size: 34px;
+}
+
+.ud-contact .ud-contact-info-wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.ud-contact .ud-single-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ud-contact .ud-info-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #3763eb;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ud-contact .ud-info-icon i {
+  font-size: 16px;
+}
+
+.ud-contact .ud-info-meta h5 {
+  margin-bottom: 6px;
+  color: #1d2144;
+  font-size: 16px;
+}
+
+.ud-contact .ud-info-meta p {
+  margin-bottom: 0;
+  color: #637381;
+  line-height: 1.6;
+}
+
+.ud-contact .ud-contact-form-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(44, 58, 116, 0.12);
+  padding: 34px 28px;
+}
+
+.ud-contact .ud-contact-form-title {
+  margin-bottom: 18px;
+  color: #1d2144;
+  font-size: 24px;
+}
+
+.ud-contact .ud-form-group {
+  margin-bottom: 14px;
+}
+
+.ud-contact .ud-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d2144;
+}
+
+.ud-contact .ud-form-group input,
+.ud-contact .ud-form-group textarea {
+  width: 100%;
+  border: 1px solid #dfe6f3;
+  border-radius: 8px;
+  padding: 11px 14px;
+  color: #1d2144;
+  background: #fff;
+}
+
+.ud-contact .ud-form-group input:focus,
+.ud-contact .ud-form-group textarea:focus {
+  outline: 0;
+  border-color: #3763eb;
+  box-shadow: 0 0 0 3px rgba(55, 99, 235, 0.14);
+}
+
+.ud-contact .ud-main-btn {
+  border: 0;
+  border-radius: 8px;
+  background: #3763eb;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 26px;
+  transition: background-color .2s ease;
+}
+
+.ud-contact .ud-main-btn:hover {
+  background: #274bc1;
+}
+
+@media (max-width: 991.98px) {
+  .ud-contact {
+    padding: 72px 0;
+  }
+
+  .ud-contact .ud-contact-content-wrapper {
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+
+  .ud-contact .ud-contact-title h2 {
+    font-size: 28px;
+  }
+}

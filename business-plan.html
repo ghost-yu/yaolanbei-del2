@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuguang Smart Film | Business Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/business-plan.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">YUGUANG SMART FILM <small id="brandSub"></small></div>
+        <nav class="nav">
+          <a href="#overview" id="nav1"></a>
+          <a href="#pain" id="nav2"></a>
+          <a href="#solution" id="nav3"></a>
+          <a href="#simulator" id="nav4"></a>
+          <a href="#finance" id="nav5"></a>
+          <a href="#team" id="nav6"></a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="kpis" id="overview">
+      <div class="kpi"><div class="label" id="kpiL1"></div><div class="value">15-2200nm</div><div class="tip" id="kpiT1"></div></div>
+      <div class="kpi"><div class="label" id="kpiL2"></div><div class="value">3-15</div><div class="tip" id="kpiT2"></div></div>
+      <div class="kpi"><div class="label" id="kpiL3"></div><div class="value">65%+</div><div class="tip" id="kpiT3"></div></div>
+      <div class="kpi"><div class="label" id="kpiL4"></div><div class="value">30%+</div><div class="tip" id="kpiT4"></div></div>
+    </section>
+
+    <section class="main-grid">
+      <div>
+        <article class="panel hero">
+          <div class="title" id="heroTitle"></div>
+          <h1 id="heroH1"></h1>
+          <p id="heroP"></p>
+        </article>
+
+        <article class="panel" id="pain">
+          <div class="title" id="painTitle"></div>
+          <div class="list">
+            <div class="item" id="pain1"></div>
+            <div class="item" id="pain2"></div>
+            <div class="item" id="pain3"></div>
+            <div class="item" id="pain4"></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="title" id="marketTitle"></div>
+          <div class="bar-block"><div class="bar-head"><span id="m1"></span><span>88%</span></div><div class="track"><div class="fill" style="width:88%"></div></div></div>
+          <div class="bar-block"><div class="bar-head"><span id="m2"></span><span>81%</span></div><div class="track"><div class="fill" style="width:81%"></div></div></div>
+          <div class="bar-block"><div class="bar-head"><span id="m3"></span><span>69%</span></div><div class="track"><div class="fill" style="width:69%"></div></div></div>
+          <div class="bar-block"><div class="bar-head"><span id="m4"></span><span>64%</span></div><div class="track"><div class="fill" style="width:64%"></div></div></div>
+        </article>
+      </div>
+
+      <div>
+        <article class="panel" id="solution">
+          <div class="title" id="solutionTitle"></div>
+          <div class="list">
+            <div class="item" id="s1"></div>
+            <div class="item" id="s2"></div>
+            <div class="item" id="s3"></div>
+            <div class="item" id="s4"></div>
+          </div>
+        </article>
+
+        <article class="panel" id="simulator">
+          <div class="title" id="simTitle"></div>
+          <div class="sim-grid">
+            <div>
+              <div class="row"><label for="wave" id="lbWave"></label><input id="wave" type="number" min="15" max="2200" value="850" /></div>
+              <div class="row"><label for="life" id="lbLife"></label><input id="life" type="number" min="1" max="25" value="8" /></div>
+              <div class="row"><label for="price" id="lbPrice"></label><input id="price" type="number" min="10" max="10000" value="620" /></div>
+              <div class="row">
+                <label for="scene" id="lbScene"></label>
+                <select id="scene">
+                  <option value="pv" id="opt1"></option>
+                  <option value="agri" id="opt2"></option>
+                  <option value="research" id="opt3"></option>
+                  <option value="industry" id="opt4"></option>
+                </select>
+              </div>
+              <button class="btn" id="simulate"></button>
+            </div>
+
+            <aside class="result">
+              <div class="result-row"><div class="k" id="rk1"></div><div id="outBand"></div></div>
+              <div class="result-row"><div class="k" id="rk2"></div><div id="outTier"></div></div>
+              <div class="result-row"><div class="k" id="rk3"></div><div id="outQuote"></div></div>
+              <div class="result-row"><div class="k" id="rk4"></div><div id="outMatch"></div></div>
+              <div class="result-row"><div class="k" id="rk5"></div><div id="outPlan"></div></div>
+              <div class="result-row"><div class="k" id="rk6"></div><div id="outValue"></div></div>
+            </aside>
+          </div>
+        </article>
+      </div>
+
+      <div id="finance">
+        <article class="panel">
+          <div class="title" id="finTitle"></div>
+          <div class="fin-item"><b id="f1h"></b><p id="f1p"></p></div>
+          <div class="fin-item"><b id="f2h"></b><p id="f2p"></p></div>
+          <div class="fin-item"><b id="f3h"></b><p id="f3p"></p></div>
+          <div class="fin-item"><b id="f4h"></b><p id="f4p"></p></div>
+          <ul class="timeline">
+            <li><h4 id="t1h"></h4><p id="t1p"></p></li>
+            <li><h4 id="t2h"></h4><p id="t2p"></p></li>
+            <li><h4 id="t3h"></h4><p id="t3p"></p></li>
+            <li><h4 id="t4h"></h4><p id="t4p"></p></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel team" id="team">
+      <div class="team-head">
+        <h2 id="teamTitle"></h2>
+        <p id="teamSub"></p>
+      </div>
+      <div class="team-grid" id="teamGrid"></div>
+    </section>
+
+    <div class="note" id="note"></div>
+  </div>
+
+  <div class="modal" id="memberModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-top">
+        <h3 id="modalName"></h3>
+        <button class="close" id="modalClose" aria-label="Close">×</button>
+      </div>
+      <div class="modal-main">
+        <img class="modal-photo" id="modalImage" src="" alt="member photo" />
+        <div>
+          <p class="line"><span class="k" id="mk1"></span><span class="v" id="modalFieldName"></span></p>
+          <p class="line"><span class="k" id="mk2"></span><span class="v" id="modalFieldRole"></span></p>
+          <p class="line"><span class="k" id="mk3"></span><span class="v" id="modalFieldPhoto"></span></p>
+          <p class="bio" id="modalBio"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="assets/js/team-data.js"></script>
+  <script src="assets/js/business-plan.js"></script>
+</body>
+</html>

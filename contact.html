@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>驭光智膜 | 联系我们</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://use.fontawesome.com/releases/v6.5.1/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/business-plan.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">YUGUANG SMART FILM <small>CONTACT</small></div>
+        <nav class="nav">
+          <a href="index.html">首页</a>
+          <a href="products.html">方案与定价</a>
+          <a href="platform.html">研发与交付</a>
+          <a href="platform-demo.html">中试看板</a>
+          <a href="core-tech.html">核心技术</a>
+          <a href="business-plan.html">商业计划书</a>
+          <a href="contact.html">联系我们</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="kpis" id="overview">
+      <div class="kpi">
+        <div class="label">地址</div>
+        <div class="value">北京</div>
+        <div class="tip">海淀区学院路 29 号（中国地质大学北京）</div>
+      </div>
+      <div class="kpi">
+        <div class="label">电话</div>
+        <div class="value">183</div>
+        <div class="tip">18327727192</div>
+      </div>
+      <div class="kpi">
+        <div class="label">邮箱</div>
+        <div class="value">QQ</div>
+        <div class="tip">1423708148@qq.com</div>
+      </div>
+      <div class="kpi">
+        <div class="label">服务方向</div>
+        <div class="value">4类</div>
+        <div class="tip">光伏 · 农业 · 科研 · 工业</div>
+      </div>
+    </section>
+
+    <section class="main-grid">
+      <div>
+        <article class="panel hero">
+          <div class="title">CONTACT</div>
+          <h1>驭光智膜<br />欢迎对接项目合作与产业化落地</h1>
+          <p>可提交目标波长、寿命、预算与应用场景，我们将结合数据库、算法与中试能力提供匹配建议。</p>
+        </article>
+
+        <article class="panel">
+          <div class="title">合作方向</div>
+          <div class="list">
+            <div class="item">光伏封装增效：围绕组件效率、稳定性和回报周期设计转光方案。</div>
+            <div class="item">设施农业种植：结合作物生长周期与光谱需求提供分阶段策略。</div>
+            <div class="item">科研与实验定制：面向课题组和企业研发中心提供数据与配方服务。</div>
+            <div class="item">通用工业应用：支持多场景功能膜开发与工艺验证。</div>
+          </div>
+        </article>
+      </div>
+
+      <div>
+        <article class="panel" id="simulator">
+          <div class="title" id="simTitle">04｜客户需求输入演示</div>
+          <div class="sim-grid">
+            <div>
+              <div class="row"><label for="wave" id="lbWave">要求波长（nm）</label><input id="wave" type="number" min="15" max="2200" value="850" /></div>
+              <div class="row"><label for="life" id="lbLife">使用寿命（年）</label><input id="life" type="number" min="1" max="25" value="8" /></div>
+              <div class="row"><label for="price" id="lbPrice">目标报价（元/㎡）</label><input id="price" type="number" min="10" max="10000" value="620" /></div>
+              <div class="row">
+                <label for="scene" id="lbScene">应用场景</label>
+                <select id="scene">
+                  <option value="pv" id="opt1">光伏封装增效</option>
+                  <option value="agri" id="opt2">设施农业种植</option>
+                  <option value="research" id="opt3">科研与实验定制</option>
+                  <option value="industry" id="opt4">通用工业应用</option>
+                </select>
+              </div>
+              <div class="row"><label for="fullName">姓名*</label><input id="fullName" type="text" name="fullName" placeholder="请输入姓名" /></div>
+              <div class="row"><label for="email">邮箱*</label><input id="email" type="email" name="email" placeholder="请输入邮箱" /></div>
+              <div class="row"><label for="phone">联系电话*</label><input id="phone" type="text" name="phone" placeholder="请输入联系电话" /></div>
+              <div class="row"><label for="message">需求说明*</label><textarea id="message" name="message" rows="3" placeholder="请输入目标波长、寿命、预算或合作方向"></textarea></div>
+              <button class="btn" id="simulate" type="button">提交需求</button>
+            </div>
+
+            <aside class="result">
+              <div class="result-row"><div class="k"><i class="fas fa-location-dot"></i> 地址</div><div>北京市海淀区学院路 29 号（中国地质大学北京）</div></div>
+              <div class="result-row"><div class="k"><i class="fas fa-phone-flip"></i> 电话</div><div>18327727192</div></div>
+              <div class="result-row"><div class="k"><i class="fas fa-envelope"></i> 邮箱</div><div>1423708148@qq.com</div></div>
+              <div class="result-row"><div class="k">波段分类</div><div>近红外（NIR）</div></div>
+              <div class="result-row"><div class="k">建议产品</div><div>定制型转光膜</div></div>
+              <div class="result-row"><div class="k">建议单价</div><div>￥785/㎡</div></div>
+              <div class="result-row"><div class="k">预算状态</div><div><span class="chip bad">预算不足</span></div></div>
+              <div class="result-row"><div class="k">交付建议</div><div>建议分阶段实施：先核心区域，后全量开展。</div></div>
+              <div class="result-row"><div class="k">客户价值</div><div>提高组件光谱适配效率并降低试错成本。适配中短周期验证。</div></div>
+            </aside>
+          </div>
+        </article>
+      </div>
+
+      <div>
+        <article class="panel">
+          <div class="title">响应机制</div>
+          <div class="fin-item"><b>需求确认</b><p>收到信息后 1 个工作日内完成初步沟通与问题澄清。</p></div>
+          <div class="fin-item"><b>技术评估</b><p>基于目标波段、寿命和预算给出可行性评估与建议路径。</p></div>
+          <div class="fin-item"><b>方案输出</b><p>按合作阶段输出配方建议、测试计划与交付节点。</p></div>
+          <ul class="timeline">
+            <li><h4>T+1 工作日</h4><p>完成需求登记与联系人回访。</p></li>
+            <li><h4>T+3 工作日</h4><p>给出初步技术路径和试验建议。</p></li>
+            <li><h4>T+7 工作日</h4><p>形成阶段化实施与协同计划。</p></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <div class="note">提交后可通过电话或邮箱继续补充参数，支持项目级联合推进。</div>
+  </div>
+</body>
+</html>

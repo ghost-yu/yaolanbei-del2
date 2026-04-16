@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>驭光智膜｜中试看板</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="驭光智膜中试与交付看板">
+  <link rel="icon" type="image/png" href="assets/img/yuguang/image33.png" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css">
+  <link href="assets/css/contact-section.css" rel="stylesheet" />
+
+</head>
+
+<body id="page-top">
+  <div id="wrapper">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <img src="assets/img/yuguang/image33.png" alt="logo" style="height:36px;width:auto;">
+        </div>
+        <div class="sidebar-brand-text mx-2">驭光智膜</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>官网首页</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="products.html"><i class="fas fa-cubes"></i><span>方案与定价</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="platform.html"><i class="fas fa-network-wired"></i><span>研发与交付</span></a></li>
+      <li class="nav-item active"><a class="nav-link" href="platform-demo.html"><i class="fas fa-tachometer-alt"></i><span>中试看板</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="core-tech.html"><i class="fas fa-microchip"></i><span>核心技术</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-headset"></i><span>联系我们</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="business-plan.html"><i class="fas fa-file-signature"></i><span>商业计划书</span></a></li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">模块</div>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-file-alt"></i><span>需求确认</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-random"></i><span>AI匹配</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-vial"></i><span>样品测试</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-truck"></i><span>中试交付</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-file-contract"></i><span>报告输出</span></a></li>
+      <hr class="sidebar-divider d-none d-md-block">
+      <div class="text-center d-none d-md-inline"><button class="rounded-circle border-0" id="sidebarToggle"></button></div>
+    </ul>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <div class="d-sm-flex align-items-center justify-content-between w-100">
+            <div>
+              <h1 class="h3 mb-0 text-gray-800">驭光智膜中试与交付看板</h1>
+              <small class="text-muted">角色切换、方案详情、订单看板、趋势图、报告输出</small>
+            </div>
+            <div class="mt-3 mt-sm-0">
+              <button class="btn btn-primary btn-sm mr-2" data-role="pv">光伏客户</button>
+              <button class="btn btn-outline-primary btn-sm mr-2" data-role="agri">农业客户</button>
+              <button class="btn btn-outline-primary btn-sm" data-role="research">科研服务</button>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid">
+          <div class="alert alert-primary shadow-sm" role="alert">
+            <strong id="roleBadge">光伏客户视角</strong> · <span id="roleSummary">关注波段匹配、组件寿命和单位增益回报。</span>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 metric-title">候选方案数</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 metric-value" id="metric1">126 组</div>
+                    </div>
+                    <div class="col-auto"><i class="fas fa-project-diagram fa-2x text-gray-300"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1 metric-title">平均匹配误差</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 metric-value" id="metric2">9.6 nm</div>
+                    </div>
+                    <div class="col-auto"><i class="fas fa-bullseye fa-2x text-gray-300"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1 metric-title">中试批次</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 metric-value" id="metric3">18 批次</div>
+                    </div>
+                    <div class="col-auto"><i class="fas fa-flask fa-2x text-gray-300"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1 metric-title">预估回报周期</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800 metric-value" id="metric4">14 月</div>
+                    </div>
+                    <div class="col-auto"><i class="fas fa-chart-line fa-2x text-gray-300"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">需求输入与方案确认趋势</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart-area" style="height:320px;"><canvas id="supplyChart"></canvas></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">项目图示</h6>
+                </div>
+                <div class="card-body">
+                  <img src="assets/img/yuguang/image42.png" class="img-fluid rounded mb-3" alt="图示">
+                  <p class="text-muted mb-0">页面图片来自你提供的《摇篮杯绘图.pptx》。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">流程节点输出</h6>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3 d-flex flex-wrap">
+                    <button class="btn btn-primary btn-sm mr-2 mb-2" data-stage-output="已完成需求确认：目标波长、寿命和预算边界已锁定。">需求确认</button>
+                    <button class="btn btn-outline-primary btn-sm mr-2 mb-2" data-stage-output="AI逆向匹配完成：已输出候选配方、工艺参数与成本测算。">AI匹配</button>
+                    <button class="btn btn-outline-primary btn-sm mr-2 mb-2" data-stage-output="样品测试完成：已得到光谱、力学与耐候测试报告。">样品测试</button>
+                    <button class="btn btn-outline-primary btn-sm mr-2 mb-2" data-stage-output="中试交付推进中：已进入批次化验证与参数固化阶段。">中试交付</button>
+                  </div>
+                  <div class="alert alert-light border" id="stageOutput">已完成需求确认：目标波长、寿命和预算边界已锁定。</div>
+                </div>
+              </div>
+
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">方案列表</h6>
+                </div>
+                <div class="card-body">
+                  <div class="list-group">
+                    <button class="list-group-item list-group-item-action active" data-material="pvTopcon">TOPCon 光伏方案 A</button>
+                    <button class="list-group-item list-group-item-action" data-material="agriCrop">设施农业方案 B</button>
+                    <button class="list-group-item list-group-item-action" data-material="researchSet">科研专属数据集方案</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">方案详情</h6>
+                </div>
+                <div class="card-body">
+                  <h5 id="materialName">TOPCon 光伏方案 A</h5>
+                  <table class="table table-sm mt-3">
+                    <tr>
+                      <th>等级</th>
+                      <td id="materialLevel">L2</td>
+                    </tr>
+                    <tr>
+                      <th>核心参数</th>
+                      <td id="materialComposition">目标波段 780-950nm / 匹配误差 9.2nm</td>
+                    </tr>
+                    <tr>
+                      <th>寿命目标</th>
+                      <td id="materialMoisture">寿命目标 25 年</td>
+                    </tr>
+                    <tr>
+                      <th>适配方向</th>
+                      <td id="materialTarget">适配高效率组件增效与户外长期工况</td>
+                    </tr>
+                    <tr>
+                      <th>建议报价</th>
+                      <td id="materialPrice">建议报价区间：按项目测算</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">追溯链路</h6>
+                </div>
+                <div class="card-body">
+                  <ol class="text-muted pl-3 mb-0" id="traceList"></ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">订单看板</h6>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-sm">
+                      <thead>
+                        <tr>
+                          <th>订单 / 批次</th>
+                          <th>状态</th>
+                          <th>数量</th>
+                          <th>节点</th>
+                        </tr>
+                      </thead>
+                      <tbody id="orderTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">创建意向单</h6>
+                </div>
+                <div class="card-body">
+                  <form id="dealForm">
+                    <div class="form-group"><label>采购方案</label><select class="form-control" id="dealProduct">
+                        <option>通用型光伏转光膜（L1）</option>
+                        <option>定制型光伏转光膜（L2/L3）</option>
+                        <option>通用型农用转光膜（L1）</option>
+                        <option>定制型农用转光膜（L2/L3）</option>
+                        <option>企业版数据库服务</option>
+                      </select></div>
+                    <div class="form-group"><label>数量/规模</label><input class="form-control" id="dealQuantity" type="text" value="按项目"></div>
+                    <div class="form-group"><label>备注</label><input class="form-control" id="dealRemark" type="text" value="优先看交付周期与ROI"></div>
+                    <button class="btn btn-primary btn-block btn-sm" type="submit">加入订单看板</button>
+                  </form>
+                  <div class="small text-success mt-3" id="dealResult"></div>
+                </div>
+              </div>
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">报告输出</h6>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted">生成方案摘要、ROI测算与阶段建议。</p>
+                  <button class="btn btn-primary btn-sm" id="reportButton">生成报告摘要</button>
+                  <div class="mt-3 text-muted small" id="reportOutput">尚未生成。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                  <div class="mb-3 mb-md-0">
+                    <h4 class="mb-1">看板使用助手</h4>
+                    <p class="text-muted mb-0">切换角色、切换方案、生成报告、创建意向单，快速模拟交付流程。</p>
+                  </div>
+                  <div>
+                    <a class="btn btn-outline-primary btn-sm mr-2 mb-2" href="platform.html">回研发与交付页</a>
+                    <a class="btn btn-primary btn-sm mb-2" href="#contact-section">联系项目团队</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="ud-contact" id="contact-section">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-7 col-lg-7">
+                  <div class="ud-contact-content-wrapper">
+                    <div class="ud-contact-title">
+                      <span>CONTACT</span>
+                      <h2>驭光智膜<br>欢迎对接项目合作与产业化落地</h2>
+                    </div>
+                    <div class="ud-contact-info-wrapper">
+                      <div class="ud-single-info">
+                        <div class="ud-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="ud-info-meta">
+                          <h5>地址</h5>
+                          <p>北京市海淀区学院路 29 号（中国地质大学北京）</p>
+                        </div>
+                      </div>
+                      <div class="ud-single-info">
+                        <div class="ud-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="ud-info-meta">
+                          <h5>电话</h5>
+                          <p>18327727192</p>
+                        </div>
+                      </div>
+                      <div class="ud-single-info">
+                        <div class="ud-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="ud-info-meta">
+                          <h5>邮箱</h5>
+                          <p>1423708148@qq.com</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-5 col-lg-5">
+                  <div class="ud-contact-form-wrapper">
+                    <h3 class="ud-contact-form-title">留言咨询</h3>
+                    <form class="ud-contact-form">
+                      <div class="ud-form-group">
+                        <label for="fullName">姓名*</label>
+                        <input id="fullName" type="text" name="fullName" placeholder="请输入姓名">
+                      </div>
+                      <div class="ud-form-group">
+                        <label for="email">邮箱*</label>
+                        <input id="email" type="email" name="email" placeholder="请输入邮箱">
+                      </div>
+                      <div class="ud-form-group">
+                        <label for="phone">联系电话*</label>
+                        <input id="phone" type="text" name="phone" placeholder="请输入联系电话">
+                      </div>
+                      <div class="ud-form-group">
+                        <label for="message">需求说明*</label>
+                        <textarea id="message" name="message" rows="3" placeholder="请输入目标波长、寿命、报价范围"></textarea>
+                      </div>
+                      <div class="ud-form-group mb-0">
+                        <button type="submit" class="ud-main-btn">提交需求</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto"><span>Yuguang Smart Film Platform Board</span></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+  <script src="assets/js/platform-demo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+﻿.product-compare-wrap {
+  border: 1px solid #d8e3f3;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 36px rgba(15, 47, 95, 0.12);
+}
+
+.product-compare-table {
+  margin: 0;
+  min-width: 760px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.product-compare-table thead th {
+  border: 0;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #0f2f5f 0%, #1d5fb9 100%);
+  padding: 1rem 1.1rem;
+}
+
+.product-compare-table thead th:first-child {
+  border-top-left-radius: 18px;
+}
+
+.product-compare-table thead th:last-child {
+  border-top-right-radius: 18px;
+}
+
+.product-compare-table tbody th,
+.product-compare-table tbody td {
+  border-top: 1px solid #e6eef8;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  color: #31415f;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  vertical-align: middle;
+}
+
+.product-compare-table tbody tr:nth-child(even) th,
+.product-compare-table tbody tr:nth-child(even) td {
+  background: #f7fbff;
+}
+
+.product-compare-table tbody tr:hover th,
+.product-compare-table tbody tr:hover td {
+  background: #edf4ff;
+}
+
+.product-compare-table tbody th[scope="row"] {
+  color: #0f2f5f;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.product-compare-table .compare-metric {
+  font-weight: 600;
+  color: #173b74;
+}
+
+.product-compare-table .compare-advantage {
+  color: #40577e;
+}
+
+@media (max-width: 767.98px) {
+  .product-compare-wrap {
+    border-radius: 14px;
+  }
+
+  .product-compare-table {
+    min-width: 0;
+  }
+
+  .product-compare-table thead {
+    display: none;
+  }
+
+  .product-compare-table,
+  .product-compare-table tbody,
+  .product-compare-table tr,
+  .product-compare-table th,
+  .product-compare-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .product-compare-table tbody tr {
+    border-bottom: 1px solid #dfe9f7;
+    padding: 0.4rem 0;
+  }
+
+  .product-compare-table tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  .product-compare-table tbody th,
+  .product-compare-table tbody td {
+    border-top: 1px dashed #e7eef9;
+    padding: 0.85rem 1rem 0.85rem 7rem;
+    position: relative;
+    white-space: normal;
+    background: transparent;
+  }
+
+  .product-compare-table tbody tr:nth-child(even) th,
+  .product-compare-table tbody tr:nth-child(even) td,
+  .product-compare-table tbody tr:hover th,
+  .product-compare-table tbody tr:hover td {
+    background: transparent;
+  }
+
+  .product-compare-table tbody tr th:first-child {
+    border-top: 0;
+    padding-top: 1rem;
+  }
+
+  .product-compare-table tbody th::before,
+  .product-compare-table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 0.86rem;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #123a73;
+  }
+}
