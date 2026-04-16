@@ -162,9 +162,9 @@
       function plan(r, life, scene) {
         if (r < 0.92) return "建议分阶段实施：先核心区域，后全量开展。";
         if (scene === "pv") return "建议先做封装对照实验，再批量落地。";
-        if (scene === "agri") return "建议按作物周期验证配方后再扩大部署。";
+        if (scene === "agri") return "建议按作物周期验证配方。";
         if (life >= 12) return "建议先做加速老化验证，再确认量产方案。";
-        return "建议按标准流程推进，优先完成中试验证。";
+        return "建议2周工况采样 + 小批试点后快速扩展。";
       }
 
       function value(scene, life) {
