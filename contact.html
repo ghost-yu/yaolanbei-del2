@@ -21,6 +21,7 @@
           <a href="products.html">方案与定价</a>
           <a href="platform.html">研发与交付</a>
           <a href="core-tech.html">核心技术</a>
+          <a href="business-plan.html#team">成员详情</a>
           <a href="contact.html">联系我们</a>
         </nav>
       </div>
@@ -96,12 +97,12 @@
               <div class="result-row"><div class="k"><i class="fas fa-location-dot"></i> 地址</div><div>北京市海淀区学院路 29 号（中国地质大学北京）</div></div>
               <div class="result-row"><div class="k"><i class="fas fa-phone-flip"></i> 电话</div><div>18327727192</div></div>
               <div class="result-row"><div class="k"><i class="fas fa-envelope"></i> 邮箱</div><div>1423708148@qq.com</div></div>
-              <div class="result-row"><div class="k">波段分类</div><div>近红外（NIR）</div></div>
-              <div class="result-row"><div class="k">建议产品</div><div>定制型转光膜</div></div>
-              <div class="result-row"><div class="k">建议单价</div><div>￥30/㎡</div></div>
-              <div class="result-row"><div class="k">预算状态</div><div><span class="chip bad">预算不足</span></div></div>
-              <div class="result-row"><div class="k">交付建议</div><div>建议分阶段实施：先核心区域，后全量开展。</div></div>
-              <div class="result-row"><div class="k">客户价值</div><div>提高组件光谱适配效率并降低试错成本。适配中短周期验证。</div></div>
+              <div class="result-row"><div class="k">波段分类</div><div id="outBand">近红外（NIR）</div></div>
+              <div class="result-row"><div class="k">建议产品</div><div id="outTier">定制型转光膜</div></div>
+              <div class="result-row"><div class="k">建议单价</div><div id="outQuote">￥30/㎡</div></div>
+              <div class="result-row"><div class="k">预算状态</div><div id="outMatch"><span class="chip ok">预算充足</span></div></div>
+              <div class="result-row"><div class="k">交付建议</div><div id="outPlan">建议按标准流程推进，优先完成中试验证。</div></div>
+              <div class="result-row"><div class="k">客户价值</div><div id="outValue">提高组件光谱适配效率并降低试错成本。适配中短周期验证。</div></div>
             </aside>
           </div>
         </article>
@@ -124,5 +125,79 @@
 
     <div class="note">提交后可通过电话或邮箱继续补充参数，支持项目级联合推进。</div>
   </div>
+  <script>
+    (function () {
+      function $(id) { return document.getElementById(id); }
+
+      function classifyBand(w) {
+        if (w < 380) return "紫外（UV）";
+        if (w <= 780) return "可见光（VIS）";
+        return "近红外（NIR）";
+      }
+
+      function tier(w, life, scene) {
+        if (scene === "research" || w > 1500 || life >= 12) return "高稳态转光膜";
+        if (scene === "pv" || scene === "agri" || life >= 6) return "定制型转光膜";
+        return "通用型转光膜";
+      }
+
+      function estimate(w, life, scene) {
+        var base = 280;
+        if (w < 380) base += 95;
+        else if (w <= 780) base += 65;
+        else if (w <= 1500) base += 145;
+        else base += 220;
+        base += life * 30;
+        var factor = { pv: 1.18, agri: 1.12, research: 1.26, industry: 1.04 };
+        return Math.min(30, Math.round(base * factor[scene]));
+      }
+
+      function budgetChip(target, est) {
+        var r = target / est;
+        if (r >= 1.08) return '<span class="chip ok">预算充足</span>';
+        if (r >= 0.92) return '<span class="chip warn">预算偏紧</span>';
+        return '<span class="chip bad">预算不足</span>';
+      }
+
+      function plan(r, life, scene) {
+        if (r < 0.92) return "建议分阶段实施：先核心区域，后全量开展。";
+        if (scene === "pv") return "建议先做封装对照实验，再批量落地。";
+        if (scene === "agri") return "建议按作物周期验证配方后再扩大部署。";
+        if (life >= 12) return "建议先做加速老化验证，再确认量产方案。";
+        return "建议按标准流程推进，优先完成中试验证。";
+      }
+
+      function value(scene, life) {
+        var map = {
+          pv: "提高组件光谱适配效率并降低试错成本。",
+          agri: "提升作物光谱匹配精度与轮作效率。",
+          research: "缩短实验迭代周期，提升研发输出效率。",
+          industry: "在预算可控下平衡耐久性与维护成本。"
+        };
+        return map[scene] + (life >= 10 ? "适配长周期运行。" : "适配中短周期验证。");
+      }
+
+      function runSim() {
+        var wave = Number($("wave").value || 850);
+        var life = Number($("life").value || 8);
+        var price = Number($("price").value || 620);
+        var scene = $("scene").value;
+        var est = estimate(wave, life, scene);
+        $("outBand").textContent = classifyBand(wave);
+        $("outTier").textContent = tier(wave, life, scene);
+        $("outQuote").textContent = "￥" + est + "/㎡";
+        $("outMatch").innerHTML = budgetChip(price, est);
+        $("outPlan").textContent = plan(price / est, life, scene);
+        $("outValue").textContent = value(scene, life);
+      }
+
+      $("simulate").addEventListener("click", runSim);
+      ["wave", "life", "price", "scene"].forEach(function (id) {
+        $(id).addEventListener("input", runSim);
+        $(id).addEventListener("change", runSim);
+      });
+      runSim();
+    })();
+  </script>
 </body>
 </html>
