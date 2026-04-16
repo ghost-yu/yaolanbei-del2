@@ -1,5 +1,5 @@
 ﻿const Z = {
-      brandSub: "\u9A6D\u5149\u667A\u819C\uFF5C\u5546\u4E1A\u8BA1\u5212\u4E66\u524D\u7AEF\u6A21\u62DF",
+      brandSub: "\u9A6D\u5149\u667A\u819C\uFF5C\u5546\u4E1A\u8BA1\u5212\u4E66\u5C55\u793A",
       nav1: "01 \u9879\u76EE\u603B\u89C8",
       nav2: "02 \u884C\u4E1A\u75DB\u70B9",
       nav3: "03 \u89E3\u51B3\u65B9\u6848",
@@ -83,6 +83,7 @@
     const teamGrid = $("teamGrid");
     const modal = $("memberModal");
     const modalClose = $("modalClose");
+    const modalImage = $("modalImage");
     const modalFieldName = $("modalFieldName");
     const modalBio = $("modalBio");
     const modalName = $("modalName");
@@ -91,6 +92,7 @@
       const members = window.TEAM_MEMBERS || [];
       teamGrid.innerHTML = members.map((m, i) => {
         return `<article class="card">
+          <img class="photo open" data-i="${i}" src="${m.image_file}" alt="${e(m.name)}" loading="lazy" />
           <div class="body">
             <p class="line"><span class="k">\u59D3\u540D</span><span class="v open" data-i="${i}" style="cursor:pointer;color:var(--cyan)">${e(m.name)}</span></p>
             <p class="line"><span class="k">\u7B80\u4ECB</span><span class="v">${e(summary(m.bio, 84))}</span></p>
@@ -100,12 +102,14 @@
       }).join("");
 
       document.querySelectorAll(".open").forEach((node) => node.addEventListener("click", () => openMember(Number(node.dataset.i))));
+      document.querySelectorAll(".photo").forEach((img) => img.addEventListener("error", () => { img.src = "assets/img/725.png"; }));
     }
 
     function openMember(i) {
       const m = (window.TEAM_MEMBERS || [])[i];
       if (!m) return;
       modalName.textContent = "\u6210\u5458\u8BE6\u60C5\uFF5C" + m.name;
+      modalImage.src = m.image_file || "assets/img/725.png";
       modalFieldName.textContent = m.name;
       modalBio.textContent = m.bio;
       modal.classList.add("show");
@@ -140,7 +144,7 @@
       if (w < 380) base += 95; else if (w <= 780) base += 65; else if (w <= 1500) base += 145; else base += 220;
       base += life * 30;
       const factor = { pv: 1.18, agri: 1.12, research: 1.26, industry: 1.04 };
-      return Math.round(base * factor[scene]);
+      return Math.min(30, Math.round(base * factor[scene]));
     }
 
     function budgetChip(target, est) {
