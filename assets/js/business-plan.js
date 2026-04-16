@@ -61,21 +61,11 @@
       t2h: "\u9636\u6BB52\uFF5C\u89C4\u6A21\u8BD5\u70B9", t2p: "\u5F62\u6210\u53EF\u590D\u5236\u53C2\u6570\u5316\u4EA4\u4ED8\u6A21\u677F\u3002",
       t3h: "\u9636\u6BB53\uFF5C\u533A\u57DF\u6269\u5F20", t3p: "\u5728\u91CD\u70B9\u533A\u57DF\u590D\u5236\u6807\u6746\u9879\u76EE\u3002",
       t4h: "\u9636\u6BB54\uFF5C\u5E73\u53F0\u5316\u590D\u8D2D", t4p: "\u4E0A\u7EBF\u8BA2\u9605\u5F0F\u670D\u52A1\u63D0\u5347\u751F\u547D\u5468\u671F\u4EF7\u503C\u3002",
-      teamTitle: "06\uFF5C\u6838\u5FC3\u56E2\u961F\uFF08\u59D3\u540D / \u89E3\u91CA / \u7167\u7247\uFF09",
-      teamSub: "\u70B9\u51FB\u7167\u7247\u3001\u59D3\u540D\u6216\u6309\u94AE\uFF0C\u53EF\u67E5\u770B\u5B8C\u6574\u4ECB\u7ECD\u3002",
+      teamTitle: "06\uFF5C\u6838\u5FC3\u56E2\u961F",
+      teamSub: "\u70B9\u51FB\u59D3\u540D\u6216\u6309\u94AE\uFF0C\u53EF\u67E5\u770B\u8BE6\u60C5\u3002",
       note: "UTF-8 \u7F16\u7801\uFF5C\u56E2\u961F\u540D\u5355\u5DF2\u5B8C\u6574\u5F55\u5165\uFF0C\u5171 7 \u4EBA\u3002",
       modalName: "\u6210\u5458\u8BE6\u60C5",
-      mk1: "\u59D3\u540D", mk2: "\u89E3\u91CA", mk3: "\u7167\u7247"
-    };
-
-    const ROLE_MAP = {
-      "\u5218\u4e00\u9ed8": "\u8d22\u52a1\u4e0e\u7ec4\u7ec7\u534f\u540c",
-      "\u66fe\u6631\u946b": "\u6570\u636e\u8ba1\u7b97\u4e0e\u6267\u884c\u7ba1\u7406",
-      "\u738b\u6cfd\u6e43": "\u7b97\u6cd5\u5efa\u6a21\u4e0e\u6280\u672f\u7814\u7a76",
-      "\u738b\u4e00\u5f6c": "\u9879\u76ee\u8fd0\u8425\u4e0e\u5b9e\u8df5\u63a8\u8fdb",
-      "\u90d1\u4f73\u6167": "\u65b0\u5a92\u4f53\u4e0e\u5185\u5bb9\u7b56\u5212",
-      "\u9a6c\u6587\u6167": "\u54c1\u724c\u4f20\u64ad\u4e0e\u6821\u4f01\u6c9f\u901a",
-      "\u9648\u5b50\u6db5": "\u961f\u957f / \u9879\u76ee\u8d1f\u8d23\u4eba"
+      mk1: "\u59D3\u540D"
     };
 
     const $ = (id) => document.getElementById(id);
@@ -93,23 +83,16 @@
     const teamGrid = $("teamGrid");
     const modal = $("memberModal");
     const modalClose = $("modalClose");
-    const modalImage = $("modalImage");
     const modalFieldName = $("modalFieldName");
-    const modalFieldRole = $("modalFieldRole");
-    const modalFieldPhoto = $("modalFieldPhoto");
     const modalBio = $("modalBio");
     const modalName = $("modalName");
 
     function renderTeam() {
       const members = window.TEAM_MEMBERS || [];
       teamGrid.innerHTML = members.map((m, i) => {
-        const role = ROLE_MAP[m.name] || "\u6838\u5fc3\u6210\u5458";
         return `<article class="card">
-          <img class="photo open" data-i="${i}" src="${m.image_file}" alt="${e(m.name)}" loading="lazy" />
           <div class="body">
             <p class="line"><span class="k">\u59D3\u540D</span><span class="v open" data-i="${i}" style="cursor:pointer;color:var(--cyan)">${e(m.name)}</span></p>
-            <p class="line"><span class="k">\u89E3\u91CA</span><span class="v">${e(role)}</span></p>
-            <p class="line"><span class="k">\u7167\u7247</span><span class="v">${e(m.image_file)}</span></p>
             <p class="line"><span class="k">\u7B80\u4ECB</span><span class="v">${e(summary(m.bio, 84))}</span></p>
             <div class="action"><button class="more open" data-i="${i}">\u67E5\u770B\u8BE6\u60C5</button></div>
           </div>
@@ -117,17 +100,13 @@
       }).join("");
 
       document.querySelectorAll(".open").forEach((node) => node.addEventListener("click", () => openMember(Number(node.dataset.i))));
-      document.querySelectorAll(".photo").forEach((img) => img.addEventListener("error", () => { img.src = "assets/img/725.png"; }));
     }
 
     function openMember(i) {
       const m = (window.TEAM_MEMBERS || [])[i];
       if (!m) return;
       modalName.textContent = "\u6210\u5458\u8BE6\u60C5\uFF5C" + m.name;
-      modalImage.src = m.image_file || "assets/img/725.png";
       modalFieldName.textContent = m.name;
-      modalFieldRole.textContent = ROLE_MAP[m.name] || "\u6838\u5fc3\u6210\u5458";
-      modalFieldPhoto.textContent = m.image_file || "N/A";
       modalBio.textContent = m.bio;
       modal.classList.add("show");
       modal.setAttribute("aria-hidden", "false");
