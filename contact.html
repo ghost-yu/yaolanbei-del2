@@ -1,203 +1,114 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>驭光智膜 | 联系我们</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
-  <script src="https://use.fontawesome.com/releases/v6.5.1/js/all.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/business-plan.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>驭光智膜 | 联系我们</title>
+<link rel="icon" type="image/png" href="assets/img/yuguang/image33.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://use.fontawesome.com/releases/v6.5.1/js/all.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="assets/css/unified.css">
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="topbar-inner">
-        <div class="brand">YUGUANG SMART FILM <small>CONTACT</small></div>
-        <nav class="nav">
-          <a href="index.html">首页</a>
-          <a href="products.html">方案与定价</a>
-          <a href="platform.html">研发与交付</a>
-          <a href="core-tech.html">核心技术</a>
-          <a href="business-plan.html#team">成员详情</a>
-          <a href="contact.html">联系我们</a>
-        </nav>
-      </div>
-    </header>
 
-    <section class="kpis" id="overview">
-      <div class="kpi">
-        <div class="label">地址</div>
-        <div class="value">北京</div>
-        <div class="tip">海淀区学院路 29 号（中国地质大学北京）</div>
-      </div>
-      <div class="kpi">
-        <div class="label">电话</div>
-        <div class="value">183</div>
-        <div class="tip">18327727192</div>
-      </div>
-      <div class="kpi">
-        <div class="label">邮箱</div>
-        <div class="value">QQ</div>
-        <div class="tip">1423708148@qq.com</div>
-      </div>
-      <div class="kpi">
-        <div class="label">服务方向</div>
-        <div class="value">4类</div>
-        <div class="tip">光伏 · 农业 · 科研 · 工业</div>
-      </div>
-    </section>
+<div class="topbar">
+<div class="topbar-inner">
+<a class="brand" href="index.html"><img src="assets/img/yuguang/image33.png" alt="">驭光智膜</a>
+<button class="nav-toggle" onclick="document.getElementById('nav').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+<div class="nav" id="nav">
+<a href="index.html">首页</a>
+<a href="platform.html">研发与交付</a>
+<a href="products.html">方案与定价</a>
+<a href="core-tech.html">核心技术</a>
+<a href="business-plan.html">商业计划</a>
+<a href="contact.html" class="active">联系我们</a>
+</div>
+</div>
+</div>
 
-    <section class="main-grid">
-      <div>
-        <article class="panel hero">
-          <div class="title">CONTACT</div>
-          <h1>驭光智膜<br />欢迎对接项目合作与产业化落地</h1>
-          <p>可提交目标波长、寿命、预算与应用场景，我们将结合数据库、算法与中试能力提供匹配建议。</p>
-        </article>
+<div class="page">
 
-        <article class="panel">
-          <div class="title">合作方向</div>
-          <div class="list">
-            <div class="item">光伏封装增效：围绕组件效率、稳定性和回报周期设计转光方案。</div>
-            <div class="item">设施农业种植：结合作物生长周期与光谱需求提供分阶段策略。</div>
-            <div class="item">科研与实验定制：面向课题组和企业研发中心提供数据与配方服务。</div>
-            <div class="item">通用工业应用：支持多场景功能膜开发与工艺验证。</div>
-          </div>
-        </article>
-      </div>
+<section class="kpis" id="overview">
+<div class="kpi"><div class="label">地址</div><div class="value">北京</div><div class="tip">海淀区学院路 29 号（中国地质大学北京）</div></div>
+<div class="kpi"><div class="label">电话</div><div class="value">183</div><div class="tip">18327727192</div></div>
+<div class="kpi"><div class="label">邮箱</div><div class="value">QQ</div><div class="tip">1423708148@qq.com</div></div>
+<div class="kpi"><div class="label">服务方向</div><div class="value">4类</div><div class="tip">光伏 · 农业 · 科研 · 工业</div></div>
+</section>
 
-      <div>
-        <article class="panel" id="simulator">
-          <div class="title" id="simTitle">04｜客户需求输入演示</div>
-          <div class="sim-grid">
-            <div>
-              <div class="row"><label for="wave" id="lbWave">要求波长（nm）</label><input id="wave" type="number" min="15" max="2200" value="850" /></div>
-              <div class="row"><label for="life" id="lbLife">使用寿命（年）</label><input id="life" type="number" min="1" max="25" value="8" /></div>
-              <div class="row"><label for="price" id="lbPrice">目标报价（元/㎡）</label><input id="price" type="number" min="10" max="10000" value="620" /></div>
-              <div class="row">
-                <label for="scene" id="lbScene">应用场景</label>
-                <select id="scene">
-                  <option value="pv" id="opt1">光伏封装增效</option>
-                  <option value="agri" id="opt2">设施农业种植</option>
-                  <option value="research" id="opt3">科研与实验定制</option>
-                  <option value="industry" id="opt4">通用工业应用</option>
-                </select>
-              </div>
-              <div class="row"><label for="fullName">姓名*</label><input id="fullName" type="text" name="fullName" placeholder="请输入姓名" /></div>
-              <div class="row"><label for="email">邮箱*</label><input id="email" type="email" name="email" placeholder="请输入邮箱" /></div>
-              <div class="row"><label for="phone">联系电话*</label><input id="phone" type="text" name="phone" placeholder="请输入联系电话" /></div>
-              <div class="row"><label for="message">需求说明*</label><textarea id="message" name="message" rows="3" placeholder="请输入目标波长、寿命、预算或合作方向"></textarea></div>
-              <button class="btn" id="simulate" type="button">提交需求</button>
-            </div>
+<section class="main-grid">
+<div>
+<article class="panel hero">
+<div class="title">CONTACT</div>
+<h1>驭光智膜<br>欢迎对接项目合作与产业化落地</h1>
+<p>可提交目标波长、寿命、预算与应用场景，我们将结合数据库、算法与中试能力提供匹配建议。</p>
+</article>
+<article class="panel">
+<div class="title">合作方向</div>
+<div class="list">
+<div class="item">光伏封装增效：围绕组件效率、稳定性和回报周期设计转光方案。</div>
+<div class="item">设施农业种植：结合作物生长周期与光谱需求提供分阶段策略。</div>
+<div class="item">科研与实验定制：面向课题组和企业研发中心提供数据与配方服务。</div>
+<div class="item">通用工业应用：支持多场景功能膜开发与工艺验证。</div>
+</div>
+</article>
+</div>
 
-            <aside class="result">
-              <div class="result-row"><div class="k"><i class="fas fa-location-dot"></i> 地址</div><div>北京市海淀区学院路 29 号（中国地质大学北京）</div></div>
-              <div class="result-row"><div class="k"><i class="fas fa-phone-flip"></i> 电话</div><div>18327727192</div></div>
-              <div class="result-row"><div class="k"><i class="fas fa-envelope"></i> 邮箱</div><div>1423708148@qq.com</div></div>
-              <div class="result-row"><div class="k">波段分类</div><div id="outBand">近红外（NIR）</div></div>
-              <div class="result-row"><div class="k">建议产品</div><div id="outTier">定制型转光膜</div></div>
-              <div class="result-row"><div class="k">建议单价</div><div id="outQuote">￥30/㎡</div></div>
-              <div class="result-row"><div class="k">预算状态</div><div id="outMatch"><span class="chip ok">预算充足</span></div></div>
-              <div class="result-row"><div class="k">交付建议</div><div id="outPlan">建议按标准流程推进，优先完成中试验证。</div></div>
-              <div class="result-row"><div class="k">客户价值</div><div id="outValue">提高组件光谱适配效率并降低试错成本。适配中短周期验证。</div></div>
-            </aside>
-          </div>
-        </article>
-      </div>
+<div>
+<article class="panel" id="simulator">
+<div class="title">04 | 客户需求输入演示</div>
+<div class="sim-grid">
+<div>
+<div class="row"><label for="wave">要求波长（nm）</label><input id="wave" type="number" min="15" max="2200" value="850"></div>
+<div class="row"><label for="life">使用寿命（年）</label><input id="life" type="number" min="1" max="25" value="8"></div>
+<div class="row"><label for="price">目标报价（元/m&sup2;）</label><input id="price" type="number" min="10" max="10000" value="620"></div>
+<div class="row"><label for="scene">应用场景</label>
+<select id="scene">
+<option value="pv">光伏封装增效</option>
+<option value="agri">设施农业种植</option>
+<option value="research">科研与实验定制</option>
+<option value="industry">通用工业应用</option>
+</select></div>
+<div class="row"><label for="fullName">姓名*</label><input id="fullName" type="text" placeholder="请输入姓名"></div>
+<div class="row"><label for="email">邮箱*</label><input id="email" type="email" placeholder="请输入邮箱"></div>
+<div class="row"><label for="phone">联系电话*</label><input id="phone" type="text" placeholder="请输入联系电话"></div>
+<div class="row"><label for="message">需求说明*</label><textarea id="message" rows="3" placeholder="请输入目标波长、寿命、预算或合作方向"></textarea></div>
+<button class="btn" id="simulate" type="button">提交需求</button>
+</div>
+<aside class="result">
+<div class="result-row"><div class="k"><i class="fas fa-location-dot"></i> 地址</div><div>北京市海淀区学院路 29 号（中国地质大学北京）</div></div>
+<div class="result-row"><div class="k"><i class="fas fa-phone-flip"></i> 电话</div><div>18327727192</div></div>
+<div class="result-row"><div class="k"><i class="fas fa-envelope"></i> 邮箱</div><div>1423708148@qq.com</div></div>
+<div class="result-row"><div class="k">波段分类</div><div id="outBand">近红外（NIR）</div></div>
+<div class="result-row"><div class="k">建议产品</div><div id="outTier">定制型转光膜</div></div>
+<div class="result-row"><div class="k">建议单价</div><div id="outQuote">￥30/m&sup2;</div></div>
+<div class="result-row"><div class="k">预算状态</div><div id="outMatch"><span class="chip ok">预算充足</span></div></div>
+<div class="result-row"><div class="k">交付建议</div><div id="outPlan">建议按标准流程推进，优先完成中试验证。</div></div>
+<div class="result-row"><div class="k">客户价值</div><div id="outValue">提高组件光谱适配效率并降低试错成本。</div></div>
+</aside>
+</div>
+</article>
+</div>
 
-      <div>
-        <article class="panel">
-          <div class="title">响应机制</div>
-          <div class="fin-item"><b>需求确认</b><p>收到信息后 1 个工作日内完成初步沟通与问题澄清。</p></div>
-          <div class="fin-item"><b>技术评估</b><p>基于目标波段、寿命和预算给出可行性评估与建议路径。</p></div>
-          <div class="fin-item"><b>方案输出</b><p>按合作阶段输出配方建议、测试计划与交付节点。</p></div>
-          <ul class="timeline">
-            <li><h4>T+1 工作日</h4><p>完成需求登记与联系人回访。</p></li>
-            <li><h4>T+3 工作日</h4><p>给出初步技术路径和试验建议。</p></li>
-            <li><h4>T+7 工作日</h4><p>形成阶段化实施与协同计划。</p></li>
-          </ul>
-        </article>
-      </div>
-    </section>
+<div>
+<article class="panel">
+<div class="title">响应机制</div>
+<div class="fin-item"><b>需求确认</b><p>收到信息后 1 个工作日内完成初步沟通与问题澄清。</p></div>
+<div class="fin-item"><b>技术评估</b><p>基于目标波段、寿命和预算给出可行性评估与建议路径。</p></div>
+<div class="fin-item"><b>方案输出</b><p>按合作阶段输出配方建议、测试计划与交付节点。</p></div>
+<ul class="timeline">
+<li><h4>T+1 工作日</h4><p>完成需求登记与联系人回访。</p></li>
+<li><h4>T+3 工作日</h4><p>给出初步技术路径和试验建议。</p></li>
+<li><h4>T+7 工作日</h4><p>形成阶段化实施与协同计划。</p></li>
+</ul>
+</article>
+</div>
+</section>
 
-    <div class="note">提交后可通过电话或邮箱继续补充参数，支持项目级联合推进。</div>
-  </div>
-  <script>
-    (function () {
-      function $(id) { return document.getElementById(id); }
-
-      function classifyBand(w) {
-        if (w < 380) return "紫外（UV）";
-        if (w <= 780) return "可见光（VIS）";
-        return "近红外（NIR）";
-      }
-
-      function tier(w, life, scene) {
-        if (scene === "research" || w > 1500 || life >= 12) return "高稳态转光膜";
-        if (scene === "pv" || scene === "agri" || life >= 6) return "定制型转光膜";
-        return "通用型转光膜";
-      }
-
-      function estimate(w, life, scene) {
-        var base = 280;
-        if (w < 380) base += 95;
-        else if (w <= 780) base += 65;
-        else if (w <= 1500) base += 145;
-        else base += 220;
-        base += life * 30;
-        var factor = { pv: 1.18, agri: 1.12, research: 1.26, industry: 1.04 };
-        return Math.min(30, Math.round(base * factor[scene]));
-      }
-
-      function budgetChip(target, est) {
-        var r = target / est;
-        if (r >= 1.08) return '<span class="chip ok">预算充足</span>';
-        if (r >= 0.92) return '<span class="chip warn">预算偏紧</span>';
-        return '<span class="chip bad">预算不足</span>';
-      }
-
-      function plan(r, life, scene) {
-        if (r < 0.92) return "建议分阶段实施：先核心区域，后全量开展。";
-        if (scene === "pv") return "建议先做封装对照实验，再批量落地。";
-        if (scene === "agri") return "建议按作物周期验证配方。";
-        if (life >= 12) return "建议先做加速老化验证，再确认量产方案。";
-        return "建议2周工况采样 + 小批试点后快速扩展。";
-      }
-
-      function value(scene, life) {
-        var map = {
-          pv: "提高组件光谱适配效率并降低试错成本。",
-          agri: "提升作物光谱匹配精度与轮作效率。",
-          research: "缩短实验迭代周期，提升研发输出效率。",
-          industry: "在预算可控下平衡耐久性与维护成本。"
-        };
-        return map[scene] + (life >= 10 ? "适配长周期运行。" : "适配中短周期验证。");
-      }
-
-      function runSim() {
-        var wave = Number($("wave").value || 850);
-        var life = Number($("life").value || 8);
-        var price = Number($("price").value || 620);
-        var scene = $("scene").value;
-        var est = estimate(wave, life, scene);
-        $("outBand").textContent = classifyBand(wave);
-        $("outTier").textContent = tier(wave, life, scene);
-        $("outQuote").textContent = "￥" + est + "/㎡";
-        $("outMatch").innerHTML = budgetChip(price, est);
-        $("outPlan").textContent = plan(price / est, life, scene);
-        $("outValue").textContent = value(scene, life);
-      }
-
-      $("simulate").addEventListener("click", runSim);
-      ["wave", "life", "price", "scene"].forEach(function (id) {
-        $(id).addEventListener("input", runSim);
-        $(id).addEventListener("change", runSim);
-      });
-      runSim();
-    })();
-  </script>
+<div class="note">提交后可通过电话或邮箱继续补充参数，支持项目级联合推进。</div>
+</div>
+<script src="assets/js/contact-sim.js"></script>
+<script>
+(function(){var n=document.getElementById("nav");if(!n)return;var a=n.querySelectorAll("a");for(var i=0;i<a.length;i++)a[i].addEventListener("click",function(){n.classList.remove("open")})})();
+</script>
 </body>
 </html>
