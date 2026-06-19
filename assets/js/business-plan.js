@@ -134,20 +134,21 @@
     }
 
     function tier(w, life, scene) {
-      if (scene === "research" || w > 1500 || life >= 12) return "\u9AD8\u7A33\u6001\u8F6C\u5149\u819C";
-      if (scene === "pv" || scene === "agri" || life >= 6) return "\u5B9A\u5236\u578B\u8F6C\u5149\u819C";
-      return "\u901A\u7528\u578B\u8F6C\u5149\u819C";
+      if (scene === "research") return "\u7814\u53D1\u670D\u52A1\u578B\uFF08L4\uFF09";
+      if (w > 1500 || life >= 12) return "\u4E13\u5C5E\u4F18\u5316\u578B\u8F6C\u5149\u819C\uFF08L3\uFF09";
+      if (scene === "pv" || scene === "agri" || life >= 6) return "\u573A\u666F\u5B9A\u5236\u578B\u8F6C\u5149\u819C\uFF08L2\uFF09";
+      return "\u57FA\u7840\u901A\u7528\u578B\u8F6C\u5149\u819C\uFF08L1\uFF09";
     }
 
     function estimate(w, life, scene) {
-      let base = 280;
-      if (w < 380) base += 95; else if (w <= 780) base += 65; else if (w <= 1500) base += 145; else base += 220;
-      base += life * 30;
-      const factor = { pv: 1.18, agri: 1.12, research: 1.26, industry: 1.04 };
-      return Math.min(30, Math.round(base * factor[scene]));
+      if (scene === "research") return null;
+      if (w > 1500 || life >= 12) return 13.8;
+      if (scene === "pv" || scene === "agri" || life >= 6) return 7.8;
+      return 5.0;
     }
 
     function budgetChip(target, est) {
+      if (est === null) return '<span class="chip warn">\u9700\u4E13\u9879\u8BC4\u4F30</span>';
       const r = target / est;
       if (r >= 1.08) return '<span class="chip ok">\u9884\u7B97\u5145\u8DB3</span>';
       if (r >= 0.92) return '<span class="chip warn">\u9884\u7B97\u504F\u7D27</span>';
@@ -180,9 +181,9 @@
       const est = estimate(wave, life, scene);
       $("outBand").textContent = classifyBand(wave);
       $("outTier").textContent = tier(wave, life, scene);
-      $("outQuote").textContent = "\uFFE5" + est + "/\u33A1";
+      $("outQuote").textContent = est === null ? "\u56FA\u5B9A\u7814\u53D1\u8D39 + \u91CF\u4EA7\u4EF7" : "\uFFE5" + est.toFixed(1) + "/\u33A1";
       $("outMatch").innerHTML = budgetChip(price, est);
-      $("outPlan").textContent = plan(price / est, life, scene);
+      $("outPlan").textContent = est === null ? "\u5EFA\u8BAE\u5148\u660E\u786E\u7814\u53D1\u8303\u56F4\u4E0E\u91CF\u4EA7\u4EF7\u683C\u53E3\u5F84\u3002" : plan(price / est, life, scene);
       $("outValue").textContent = value(scene, life);
     }
 

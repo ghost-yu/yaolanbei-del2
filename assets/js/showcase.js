@@ -165,15 +165,15 @@
   function s(id, html) { var e=document.getElementById(id); if(e) e.innerHTML=html; }
 
   function classify(w) { if(w<380) return 'UV'; if(w<=780) return 'VIS'; return 'NIR'; }
-  function tier(w,l,sc) { if(sc==='research'||w>1500||l>=12) return 'Advanced L3'; if(sc==='pv'||sc==='agri'||l>=6) return 'Custom L2'; return 'Standard L1'; }
-  function estimate(w,l,sc) { var b=280; if(w<380) b+=95; else if(w<=780) b+=65; else if(w<=1500) b+=145; else b+=220; b+=l*30; var f={pv:1.18,agri:1.12,research:1.26,industry:1.04}; return Math.min(30,Math.round(b*(f[sc]||1.1))); }
+  function tier(w,l,sc) { if(sc==='research') return 'R&D Service L4'; if(w>1500||l>=12) return 'Exclusive L3'; if(sc==='pv'||sc==='agri'||l>=6) return 'Scenario Custom L2'; return 'Basic Standard L1'; }
+  function estimate(w,l,sc) { if(sc==='research') return null; if(w>1500||l>=12) return 13.8; if(sc==='pv'||sc==='agri'||l>=6) return 7.8; return 5.0; }
 
   function run() {
     var w=Number(g('sim-wave')||850), l=Number(g('sim-life')||8), p=Number(g('sim-price')||620), sc=g('sim-scene')||'pv', est=estimate(w,l,sc);
     s('sim-out-band', classify(w));
     s('sim-out-tier', tier(w,l,sc));
-    s('sim-out-quote', '<span style=font-family:Orbitron,sans-serif;color:#0efcff;font-size:20px;>\u00a5'+est+'</span><span style=color:#9ec0d9;font-size:12px;> /m\u00b2</span>');
-    var r=p/est;
+    s('sim-out-quote', est===null ? '<span style=font-family:Orbitron,sans-serif;color:#0efcff;font-size:18px;>\u56fa\u5b9a\u7814\u53d1\u8d39 + \u91cf\u4ea7\u4ef7</span>' : '<span style=font-family:Orbitron,sans-serif;color:#0efcff;font-size:20px;>\u00a5'+est.toFixed(1)+'</span><span style=color:#9ec0d9;font-size:12px;> /m\u00b2</span>');
+    var r=est===null ? 1 : p/est;
     var st='Sufficient', cls='ok';
     if(r<0.75){st='Insufficient';cls='bad';}else if(r<0.92){st='Tight';cls='warn';}
     s('sim-out-match', '<span class=chip '+cls+'>'+st+'</span>');

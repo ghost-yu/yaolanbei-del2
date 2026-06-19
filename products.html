@@ -70,7 +70,7 @@
 <div class="l-sim-result">
 <div class="l-sr"><span class="k">推荐方案</span><span class="v" id="selResult">通用型光伏转光膜 (L1)</span></div>
 <div class="l-sr"><span class="k">适用等级</span><span class="v" id="selLevel">L1</span></div>
-<div class="l-sr"><span class="k">建议报价</span><span class="v" id="selPrice">按项目测算</span></div>
+<div class="l-sr"><span class="k">建议报价</span><span class="v" id="selPrice">7.8元/m&sup2;</span></div>
 <div class="l-sr"><span class="k">交付周期</span><span class="v" id="selTime">7-14 个工作日</span></div>
 </div>
 </div>
@@ -110,7 +110,7 @@
 
 <script>
 (function(){var n=document.getElementById("nav");if(!n)return;var a=n.querySelectorAll("a");for(var i=0;i<a.length;i++)a[i].addEventListener("click",function(){n.classList.remove("open")})})();
-function runSelection(){var i=document.getElementById("indSelect").value,b=document.getElementById("bandSelect").value,p=document.getElementById("priSelect").value;var r,l,pr,t;if(i==="pv"){r="\u5b9a\u5236\u578b\u5149\u4f0f\u8f6c\u5149\u819c (L2/L3)";l="L2";pr="\u6309\u9879\u76ee\u6d4b\u7b97";t="10-15 \u4e2a\u5de5\u4f5c\u65e5"}else if(i==="agri"){r="\u901a\u7528\u578b\u519c\u7528\u8f6c\u5149\u819c (L1)";l="L1";pr="20-30\u5143/m\u00b2";t="7-10 \u4e2a\u5de5\u4f5c\u65e5"}else{r="\u6570\u636e\u5e93\u4e0e\u6280\u672f\u670d\u52a1 (L4)";l="L4";pr="6899\u5143/\u5e74\u8d77";t="5-7 \u4e2a\u5de5\u4f5c\u65e5"}document.getElementById("selResult").textContent=r;document.getElementById("selLevel").textContent=l;document.getElementById("selPrice").textContent=pr;document.getElementById("selTime").textContent=t}
+function runSelection(){var i=document.getElementById("indSelect").value,b=document.getElementById("bandSelect").value,p=document.getElementById("priSelect").value;var r,l,pr,t;if(i==="pv"){r=p==="precision"||b==="multi"?"\u4e13\u5c5e\u4f18\u5316\u578b\u5149\u4f0f\u8f6c\u5149\u819c (L3)":"\u573a\u666f\u5b9a\u5236\u578b\u5149\u4f0f\u8f6c\u5149\u819c (L2)";l=p==="precision"||b==="multi"?"L3":"L2";pr=l==="L3"?"13.8\u5143/m\u00b2":"7.8\u5143/m\u00b2";t="10-15 \u4e2a\u5de5\u4f5c\u65e5"}else if(i==="agri"){r=p==="cost"?"\u57fa\u7840\u901a\u7528\u578b\u519c\u7528\u8f6c\u5149\u819c (L1)":"\u573a\u666f\u5b9a\u5236\u578b\u519c\u7528\u8f6c\u5149\u819c (L2)";l=p==="cost"?"L1":"L2";pr=l==="L1"?"5.0\u5143/m\u00b2":"7.8\u5143/m\u00b2";t="7-10 \u4e2a\u5de5\u4f5c\u65e5"}else{r="\u7814\u53d1\u670d\u52a1\u578b (L4)";l="L4";pr="\u56fa\u5b9a\u7814\u53d1\u8d39 + \u91cf\u4ea7\u4ef7";t="5-7 \u4e2a\u5de5\u4f5c\u65e5"}document.getElementById("selResult").textContent=r;document.getElementById("selLevel").textContent=l;document.getElementById("selPrice").textContent=pr;document.getElementById("selTime").textContent=t}
 </script>
 </body>
 </html>
