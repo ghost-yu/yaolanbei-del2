@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>驭光智膜 | 核心技术</title>
 <link rel="icon" type="image/png" href="assets/img/yuguang/image33.png">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
-<script src="https://use.fontawesome.com/releases/v6.5.1/js/all.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="assets/css/business-plan.css" />
 <link rel="stylesheet" href="assets/css/landing.css">
 </head>
@@ -27,56 +26,81 @@
 </div>
 </div>
 
-<div class="page">
-
-<section class="panel hero" style="margin-bottom:12px;">
-<div class="title">Core Tech Stack</div>
-<h1>四项核心技术一体化闭环</h1>
-<p style="color:var(--sub);font-size:14px;line-height:1.8;">以荧光材料基因数据库为底座，以 PINN 智能预测为引擎，叠加老化预测三维评价、绿色废矿提取合成、转光膜制备与测试，构建完整研发与交付链条。</p>
+<section class="page-hero">
+<img src="assets/img/showcase/materials-lab.png" alt="荧光材料实验与检测">
+<div class="page-hero-inner">
+<div class="eyebrow">Core Technology</div>
+<h1>从材料数据库到转光膜交付的全链条技术体系</h1>
+<p>我们将核心壁垒拆解为数据、算法、工艺、验证四层能力，并组织成一条从材料发现到规模交付的完整技术路线。</p>
+<div class="hero-proof"><span>3228 条标准化数据</span><span>光谱误差 &lt;10nm</span><span>研发成本降低 65%+</span><span>原材料成本降低 30%+</span></div>
+</div>
 </section>
 
-<div class="main-grid">
-<div>
-<article class="panel">
-<div class="title">01 荧光材料基因数据库</div>
-<p style="color:var(--sub);font-size:13px;line-height:1.7;">多源采集 CNKI、Web of Science、Materials Project 与实验数据，已形成 3228 条高可信样本；支持按材料体系与应用场景进行动态扩增和定制化构建。</p>
-</article>
-<article class="panel">
-<div class="title">03 融合老化预测的三维综合评价模型</div>
-<p style="color:var(--sub);font-size:13px;line-height:1.7;">联合发射波长、材料成本、老化速率常数构建三维评价曲面，在特定落地环境下输出可执行参数组合，实现性能、寿命和成本协同最优。</p>
-</article>
-</div>
-
-<div>
-<article class="panel">
-<div class="title">02 基于 PINN 的正向预测算法</div>
-<p style="color:var(--sub);font-size:13px;line-height:1.7;">面向发射波长与劈裂度建立三层全连接预测网络，三项指标精度均超过 0.8；结合 SHAP 可解释性分析，实现配方优化从经验驱动转为数据驱动。</p>
-</article>
-<article class="panel">
-<div class="title">04 绿色废矿提取与荧光粉合成</div>
-<p style="color:var(--sub);font-size:13px;line-height:1.7;">打通锰系废矿提取碳酸锰、铬系废矿提取氧化铬与荧光粉合成路径，构建资源化利用-高值材料制备的绿色工艺路线，兼顾成本与环保。</p>
-</article>
+<main class="tech-page">
+<section class="tech-overview">
+<div class="tech-overview-copy">
+<div class="label">Technology Thesis</div>
+<h2>用机器学习重构转光材料研发范式</h2>
+<p>传统转光膜研发高度依赖经验试错，一款新型荧光材料研发周期可达 18-24 个月。驭光智膜以荧光材料基因数据库为底座，结合 PINN 正向预测、SHAP 可解释分析、多目标逆向设计和中试验证，把研发链条压缩为可迭代、可解释、可交付的闭环。</p>
+<div class="tech-flow">
+<span>文献/晶体/实验数据</span>
+<span>AI 清洗与标准化</span>
+<span>PINN 性能预测</span>
+<span>多目标配方推荐</span>
+<span>制膜与全性能测试</span>
 </div>
 </div>
-
-<div style="margin-top:12px;">
-<article class="panel">
-<div class="title">05 转光膜制备与性能测试</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-<p style="color:var(--sub);font-size:13px;line-height:1.7;">从颗粒半径控制、吹膜/压膜工艺到光谱透光均匀性与耐候稳定性测试，形成可规模化复制的工程化验证体系，支撑中试到量产落地。</p>
-<img src="assets/img/yuguang/image36.png" alt="转光膜制备" style="width:100%;border:1px solid var(--line-soft);">
-</div>
-</article>
-</div>
-
-<section class="kpis" style="margin-top:12px;">
-<div class="kpi"><div class="label">数据库样本</div><div class="value">3228</div><div class="tip">高可信荧光材料数据</div></div>
-<div class="kpi"><div class="label">模型精度</div><div class="value">80%+</div><div class="tip">三项指标均超 0.8</div></div>
-<div class="kpi"><div class="label">光谱范围</div><div class="value">15-2200nm</div><div class="tip">覆盖紫外到近红外</div></div>
-<div class="kpi"><div class="label">合成路径</div><div class="value">2条</div><div class="tip">锰系 + 铬系废矿提取</div></div>
+<div class="tech-overview-media"><img src="assets/img/showcase/film-roll-factory.png" alt="转光膜制备与工艺验证"></div>
 </section>
 
+<section class="barrier-grid">
+<article>
+<span>01 数据壁垒</span>
+<h3>荧光材料基因数据库</h3>
+<p>完成 Eu、Mn、Cr 等 7 大核心掺杂体系 3228 条标准化数据采集，覆盖成分、结构、制备工艺、光谱性能等 20 多个核心维度。</p>
+<strong>动态扩容 · 定制化构建 · 转光场景专属</strong>
+</article>
+<article>
+<span>02 算法壁垒</span>
+<h3>PINN 正向预测算法</h3>
+<p>发射波长、劈裂度等核心性能指标均突破 0.8，光谱匹配误差控制在 10nm 以内，并支持 SHAP 可解释分析。</p>
+<strong>2-4 周研发周期 · 成本降低 65%+</strong>
+</article>
+<article>
+<span>03 工艺壁垒</span>
+<h3>绿色废矿提取与合成</h3>
+<p>从尾矿中提取碳酸锰、氧化铬等荧光粉核心前驱体，原材料成本较传统采购模式降低 30% 以上。</p>
+<strong>固废资源化 · 碳排放降低 40%+</strong>
+</article>
+<article>
+<span>04 验证壁垒</span>
+<h3>全性能测试体系</h3>
+<p>覆盖光谱性能、透光率、耐候性、力学性能等指标，并与外部测试机构形成长期合作，支撑量产稳定性。</p>
+<strong>材料合成 · 膜制备 · 测试验证</strong>
+</article>
+</section>
+
+<section class="l-section tech-detail-section">
+<div class="wrap text-center"><div class="label">Technical Modules</div><h2>五项核心技术模块</h2><p class="lead">以模块化方式呈现核心研发能力，帮助合作方快速理解数据基础、算法方法与工程验证体系。</p></div>
+<div class="tech-detail-grid">
+<article class="tech-detail-card"><div class="num">01</div><h3>荧光材料基因数据库</h3><p>多源采集 CNKI、Web of Science、Materials Project 与实验数据，形成 3228 条高可信样本；支持按材料体系与应用场景动态扩增。</p></article>
+<article class="tech-detail-card"><div class="num">02</div><h3>基于 PINN 的正向预测算法</h3><p>面向发射波长与劈裂度建立三层全连接预测网络，结合 SHAP 可解释性分析，实现配方优化从经验驱动转为数据驱动。</p></article>
+<article class="tech-detail-card"><div class="num">03</div><h3>融合老化预测的三维综合评价模型</h3><p>联合发射波长、材料成本、老化速率常数构建三维评价曲面，在落地环境下输出性能、寿命和成本协同最优解。</p></article>
+<article class="tech-detail-card"><div class="num">04</div><h3>绿色废矿提取与荧光粉合成</h3><p>打通锰系、铬系废矿提取碳酸锰和氧化铬的合成路径，构建资源化利用到高值材料制备的绿色工艺路线。</p></article>
+<article class="tech-detail-card feature-wide"><div class="num">05</div><div><h3>转光膜制备与性能测试</h3><p>从颗粒半径控制、吹膜/压膜工艺到光谱透光均匀性与耐候稳定性测试，形成可规模化复制的工程化验证体系。</p></div><img src="assets/img/yuguang/image36.png" alt="转光膜制备流程"></article>
 </div>
+</section>
+
+<section class="tech-proof-band">
+<img src="assets/img/showcase/materials-lab.png" alt="荧光粉与光谱测试">
+<div>
+<div class="label">Why It Matters</div>
+<h2>解决“研发慢、适配差、寿命短、交付难”的行业问题</h2>
+<p>当前市场中大量产品仍采用通用固定光谱设计，难以匹配光伏不同电池路线与农业不同作物周期。我们通过数据模型提高配方命中率，用绿色合成降低成本，并以测试体系保障长期服役稳定性。</p>
+<div class="proof-list"><span>研发周期从年级压缩至周级</span><span>定制化产品溢价控制在 20% 以内</span><span>适配光伏、农业、科研三大赛道</span></div>
+</div>
+</section>
+</main>
 
 <script>
 (function(){var n=document.getElementById("nav");if(!n)return;var a=n.querySelectorAll("a");for(var i=0;i<a.length;i++)a[i].addEventListener("click",function(){n.classList.remove("open")})})();

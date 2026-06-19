@@ -27,40 +27,35 @@
 </div>
 </div>
 
-<div class="page">
-
-<section class="kpis" id="overview">
-<div class="kpi"><div class="label">地址</div><div class="value">北京</div><div class="tip">海淀区学院路 29 号（中国地质大学北京）</div></div>
-<div class="kpi"><div class="label">电话</div><div class="value">183</div><div class="tip">18327727192</div></div>
-<div class="kpi"><div class="label">邮箱</div><div class="value">QQ</div><div class="tip">1423708148@qq.com</div></div>
-<div class="kpi"><div class="label">服务方向</div><div class="value">4类</div><div class="tip">光伏 · 农业 · 科研 · 工业</div></div>
+<section class="page-hero contact-hero">
+<img src="assets/img/showcase/film-roll-hero.jpg" alt="驭光智膜合作咨询">
+<div class="page-hero-inner">
+<div class="eyebrow">Contact Sales</div>
+<h1>把目标波段和应用场景发给我们</h1>
+<p>我们会基于材料数据库、PINN 配方推荐和中试工艺经验，给出可沟通的初步方案路径。适用于光伏封装、设施农业、科研实验和产业化联合验证。</p>
+<div class="hero-proof"><span>1 个工作日内响应</span><span>初步技术路径评估</span><span>支持项目合作与产业协同</span></div>
+</div>
 </section>
 
-<section class="main-grid">
+<main class="contact-shell">
+<section class="contact-sales-grid">
+<article class="contact-form-panel" id="simulator">
+<div class="contact-panel-head">
 <div>
-<article class="panel hero">
-<div class="title">CONTACT</div>
-<h1>驭光智膜<br>欢迎对接项目合作与产业化落地</h1>
-<p>可提交目标波长、寿命、预算与应用场景，我们将结合数据库、算法与中试能力提供匹配建议。</p>
-</article>
-<article class="panel">
-<div class="title">合作方向</div>
-<div class="list">
-<div class="item">光伏封装增效：围绕组件效率、稳定性和回报周期设计转光方案。</div>
-<div class="item">设施农业种植：结合作物生长周期与光谱需求提供分阶段策略。</div>
-<div class="item">科研与实验定制：面向课题组和企业研发中心提供数据与配方服务。</div>
-<div class="item">通用工业应用：支持多场景功能膜开发与工艺验证。</div>
+<div class="label">Request A Consultation</div>
+<h2>提交需求参数</h2>
+<p>填写核心约束后，右侧会即时生成初步方案预览，帮助双方快速对齐技术路径、预算边界与交付节奏。</p>
 </div>
-</article>
+<span class="contact-badge">在线匹配</span>
 </div>
 
-<div>
-<article class="panel" id="simulator">
-<div class="title">04 | 客户需求输入演示</div>
-<div class="l-sim">
-<div>
-<div class="row"><label for="wave">要求波长（nm）</label><input id="wave" type="number" min="15" max="2200" value="850"></div>
+<div class="contact-form-layout">
+<form class="contact-request-form" onsubmit="event.preventDefault();alert('需求已提交，团队将在1个工作日内联系您。');">
+<div class="contact-field-row">
+<div class="row"><label for="wave">目标波长（nm）</label><input id="wave" type="number" min="15" max="2200" value="850"></div>
 <div class="row"><label for="life">使用寿命（年）</label><input id="life" type="number" min="1" max="25" value="8"></div>
+</div>
+<div class="contact-field-row">
 <div class="row"><label for="price">目标报价（元/m&sup2;）</label><input id="price" type="number" min="10" max="10000" value="620"></div>
 <div class="row"><label for="scene">应用场景</label>
 <select id="scene">
@@ -69,44 +64,61 @@
 <option value="research">科研与实验定制</option>
 <option value="industry">通用工业应用</option>
 </select></div>
-<div class="row"><label for="fullName">姓名*</label><input id="fullName" type="text" placeholder="请输入姓名"></div>
-<div class="row"><label for="email">邮箱*</label><input id="email" type="email" placeholder="请输入邮箱"></div>
-<div class="row"><label for="phone">联系电话*</label><input id="phone" type="text" placeholder="请输入联系电话"></div>
-<div class="row"><label for="message">需求说明*</label><textarea id="message" rows="3" placeholder="请输入目标波长、寿命、预算或合作方向"></textarea></div>
-<button class="btn" id="simulate" type="button">提交需求</button>
 </div>
-<aside class="result">
-<div class="l-sr"><div class="k"><i class="fas fa-location-dot"></i> 地址</div><div>北京市海淀区学院路 29 号（中国地质大学北京）</div></div>
-<div class="l-sr"><div class="k"><i class="fas fa-phone-flip"></i> 电话</div><div>18327727192</div></div>
-<div class="l-sr"><div class="k"><i class="fas fa-envelope"></i> 邮箱</div><div>1423708148@qq.com</div></div>
+<div class="contact-field-row">
+<div class="row"><label for="fullName">姓名*</label><input id="fullName" type="text" placeholder="请输入姓名"></div>
+<div class="row"><label for="phone">联系电话*</label><input id="phone" type="text" placeholder="请输入联系电话"></div>
+</div>
+<div class="row"><label for="email">邮箱*</label><input id="email" type="email" placeholder="请输入邮箱"></div>
+<div class="row"><label for="message">需求说明*</label><textarea id="message" rows="4" placeholder="例如：目标波段、组件类型、作物品类、寿命要求、预算边界或合作方向"></textarea></div>
+<button class="l-btn l-btn-primary" id="simulate" type="submit">提交需求并生成预览</button>
+</form>
+
+<aside class="contact-result-card">
+<div class="contact-result-title">方案预览</div>
 <div class="l-sr"><div class="k">波段分类</div><div id="outBand">近红外（NIR）</div></div>
 <div class="l-sr"><div class="k">建议产品</div><div id="outTier">定制型转光膜</div></div>
 <div class="l-sr"><div class="k">建议单价</div><div id="outQuote">￥30/m&sup2;</div></div>
 <div class="l-sr"><div class="k">预算状态</div><div id="outMatch"><span class="chip ok">预算充足</span></div></div>
-<div class="l-sr"><div class="k">交付建议</div><div id="outPlan">建议按标准流程推进，优先完成中试验证。</div></div>
-<div class="l-sr"><div class="k">客户价值</div><div id="outValue">提高组件光谱适配效率并降低试错成本。</div></div>
+<div class="l-sr"><div class="k">交付建议</div><div id="outPlan">建议按标准流程推进。</div></div>
+<div class="l-sr"><div class="k">客户价值</div><div id="outValue">提高组件光谱适配效率。</div></div>
 </aside>
 </div>
 </article>
+
+<aside class="contact-side">
+<div class="direct-card">
+<div class="label">Direct Contact</div>
+<h3>直接联系方式</h3>
+<p>适合已有合作意向、需要补充材料或希望直接安排技术沟通的团队。</p>
+<div class="direct-line"><span>电话</span><strong>18327727192</strong></div>
+<div class="direct-line"><span>邮箱</span><strong>1423708148@qq.com</strong></div>
+<div class="direct-line"><span>地址</span><strong>北京市海淀区学院路 29 号</strong></div>
 </div>
 
-<div>
-<article class="panel">
-<div class="title">响应机制</div>
-<div class="fin-item"><b>需求确认</b><p>收到信息后 1 个工作日内完成初步沟通与问题澄清。</p></div>
-<div class="fin-item"><b>技术评估</b><p>基于目标波段、寿命和预算给出可行性评估与建议路径。</p></div>
-<div class="fin-item"><b>方案输出</b><p>按合作阶段输出配方建议、测试计划与交付节点。</p></div>
-<ul class="l-tl">
-<li><h4>T+1 工作日</h4><p>完成需求登记与联系人回访。</p></li>
-<li><h4>T+3 工作日</h4><p>给出初步技术路径和试验建议。</p></li>
-<li><h4>T+7 工作日</h4><p>形成阶段化实施与协同计划。</p></li>
-</ul>
-</article>
+<div class="response-card">
+<div class="label">Response Path</div>
+<h3>响应机制</h3>
+<ol>
+<li><strong>T+1 工作日</strong><span>完成需求登记与联系人回访。</span></li>
+<li><strong>T+3 工作日</strong><span>给出初步技术路径和试验建议。</span></li>
+<li><strong>T+7 工作日</strong><span>形成阶段化实施与协同计划。</span></li>
+</ol>
 </div>
+</aside>
 </section>
 
-<div class="note">提交后可通过电话或邮箱继续补充参数，支持项目级联合推进。</div>
+<section class="contact-route-section">
+<div class="wrap text-center"><div class="label">Collaboration Tracks</div><h2>适合对接的合作方向</h2><p class="lead">围绕应用场景与合作深度设置四类入口，便于快速进入需求评估与实施沟通。</p></div>
+<div class="contact-route-grid">
+<article><img src="assets/img/showcase/film-roll-factory.png" alt="光伏封装增效"><h3>光伏封装增效</h3><p>围绕组件效率、稳定性和回报周期设计转光方案。</p></article>
+<article><img src="assets/img/showcase/greenhouse.png" alt="设施农业种植"><h3>设施农业种植</h3><p>结合作物生长周期与光谱需求提供分阶段策略。</p></article>
+<article><img src="assets/img/showcase/materials-lab.png" alt="科研实验定制"><h3>科研与实验定制</h3><p>面向课题组和企业研发中心提供数据与配方服务。</p></article>
+<article><img src="assets/img/showcase/film-roll-hero.jpg" alt="工业应用"><h3>通用工业应用</h3><p>支持多场景功能膜开发与工艺验证。</p></article>
 </div>
+</section>
+</main>
+
 <script src="assets/js/contact-sim.js"></script>
 <script>
 (function(){var n=document.getElementById("nav");if(!n)return;var a=n.querySelectorAll("a");for(var i=0;i<a.length;i++)a[i].addEventListener("click",function(){n.classList.remove("open")})})();

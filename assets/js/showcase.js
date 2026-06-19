@@ -106,7 +106,7 @@
         if (!this.classList.contains('playing')) {
           this.classList.add('playing');
           var cap = frame.querySelector('.video-caption p');
-          if (cap) cap.textContent = '▶ Playing demo...';
+          if (cap) cap.textContent = '▶ 播放中...';
           var btn = this.querySelector('.play-btn');
           if (btn) { btn.innerHTML = '▌▌'; btn.style.animation = 'pulse-glow 1.5s ease-in-out infinite'; }
           var images = ['assets/img/yuguang/image45.png','assets/img/yuguang/image46.png','assets/img/yuguang/image47.png','assets/img/yuguang/image32.png','assets/img/yuguang/image42.png'];
@@ -123,7 +123,7 @@
           var btn = this.querySelector('.play-btn');
           if (btn) { btn.innerHTML = '▶'; btn.style.animation = ''; }
           var cap = frame.querySelector('.video-caption p');
-          if (cap) cap.textContent = 'Click to play demo';
+          if (cap) cap.textContent = '点击播放';
           if (this.dataset.interval) { clearInterval(parseInt(this.dataset.interval)); delete this.dataset.interval; }
         }
       });
